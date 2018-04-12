@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="MySQL" targetRuntime="MyBatis3" defaultModelType="flat">
+        <plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+            <property name="targetPackage" value="com.jdjr.dao.config"/>
+            <property name="targetProject" value="src/output"/>
+        </plugin>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://server/database"
+                        userId="name"
+                        password="pwd">
+        </jdbcConnection>
+
+        <javaTypeResolver/>
+
+        <javaModelGenerator targetPackage="com.jdjr.dao.bean" targetProject="src/output">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.jdjr.dao.mapper" targetProject="src/output">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.jdjr.dao" targetProject="src/output">
+            <property name="methodNameCalculator" value="default"/>
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <table tableName="pt_table1" enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false" enableCountByExample="false"
+               enableUpdateByExample="false" selectByPrimaryKeyQueryId="true"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="pt_table2" enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false" enableCountByExample="false"
+               enableUpdateByExample="false" selectByPrimaryKeyQueryId="true"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="pt_table3" enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false" enableCountByExample="false"
+               enableUpdateByExample="false" selectByPrimaryKeyQueryId="true"
+               selectByExampleQueryId="false">
+        </table>
+
+    </context>
+</generatorConfiguration>
